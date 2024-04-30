@@ -36,8 +36,7 @@ function App() {
     <>
       <div>
         <img src={r2d2} className="r2d2" alt="R2-D2" />
-        <br />
-        <h2 className='personagem'>Personagem: { personagem && personagem.name }</h2>
+        <h2 className='personagem'>{ personagem && personagem.name }</h2>
       </div>
     </>    
   )

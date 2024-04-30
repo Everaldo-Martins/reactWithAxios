@@ -16,6 +16,7 @@ body {
   transition: filter 300ms;
 }
 .personagem {
+  width: 100%;
   background-color: rgb(170, 214, 255);
   font-size: xx-large;
   color: rgb(19, 19, 19);
