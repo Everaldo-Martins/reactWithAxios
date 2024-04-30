@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css'
 import axios from 'axios';
+import r2d2 from './assets/r2-d2.gif';
 
 interface Advice{
   id: number;
@@ -9,7 +10,7 @@ interface Advice{
 
 function App() {
 
-  const [nome, setNome] = useState<String>();
+  //const [nome, setNome] = useState<String>();
   const [personagem, setPersonagem] = useState<any>();
 
   const getData = useCallback( async()=> {
@@ -26,21 +27,19 @@ function App() {
   useEffect(()=>{
     getData();
   }, [])
-
+  /*
   const defName = (nome: string) => {
     setNome(nome);
   }
-
+  */
   return (
-    <div>
-      <strong>Ola { nome }</strong>
-      <strong>{ personagem && personagem.name }</strong>
-
-      <button onClick={() => defName('Tomate')}>Tomate</button>
-      <button onClick={() => defName('Batata')}>Batata</button>
-      <button onClick={() => defName('Beterraba')}>Beterraba</button>
-
-    </div>
+    <>
+      <div>
+        <img src={r2d2} className="r2d2" alt="R2-D2" />
+        <br />
+        <h2 className='personagem'>Personagem: { personagem && personagem.name }</h2>
+      </div>
+    </>    
   )
 }
 
