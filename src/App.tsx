@@ -2,12 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 import './App.css'
 import axios from 'axios';
 import r2d2 from './assets/r2-d2.gif';
-
+/*
 interface Advice{
   id: number;
   advice: string;
 }
-
+*/
 function App() {
 
   //const [nome, setNome] = useState<String>();
